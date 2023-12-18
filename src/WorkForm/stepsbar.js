@@ -1,7 +1,7 @@
 import StepsBarInfo from '../InfoFields/stepsBarInfo.js';
 import React, { useEffect, useState } from 'react';
 
-function StepsBar ({Stateter, rule, Ref}) {
+function StepsBar ({Stateter, rule, Ref, info}) {
     let [Click, setClick] =  useState(1);
     function Up (value) {
         let num = value.value.number;
@@ -11,10 +11,9 @@ function StepsBar ({Stateter, rule, Ref}) {
     }
     function Down (value) {
         let num = value.value.number;
-        if (Ref.current) {
         return (
             <div class={"StepControlField Down"+(num==Click?" active":"")}><input id={`RectangleStep${num}`} className={"StepControlBotton"} type="button" value={Ref.current!=2?"Комментарий":value.value.text}  onClick={()=>{ value.state(num); setClick(num)}}/></div>
-        )}
+        )
     }
 
     function Middle (value,) {

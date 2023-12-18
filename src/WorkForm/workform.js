@@ -52,7 +52,7 @@ function Workform ({GetDate, Ref, ID, name, DesRef, token, rule, setCurrentId}) 
                     {name}
                 </h1>
                 <Steps Ref={Ref}/>
-            <StepBar Stateter={SetState} rule={DesRef} Ref={Ref}/>
+            <StepBar Stateter={SetState} rule={DesRef} Ref={Ref} info={info}/>
             <WorkFormFields num={state} info={info} setInfo={actualInfo}
              buttonState={setButtonState} DesRef={DesRef} rule={rule} token={token} id={ID} setCurrentId={setCurrentId}/>
         </div>

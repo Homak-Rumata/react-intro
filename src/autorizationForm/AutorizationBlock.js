@@ -17,11 +17,37 @@ function AutorizationBlock ({GetUserRule}) {
                 'Content-Type': 'application/json;charset=utf-8'
               },
             body: JSON.stringify(struct)})
-    
+            if (date.status) {
+            
             let body = await date.json()
-            alert (JSON.stringify(body))
-            return body;
+            return body;}
+            else {
+                return {}
+
+            }
+
     }
+
+    /*const requestionDouble = async () => {
+        let struct ={}
+        struct.login = Login;
+        struct.password = password;
+        const date = await fetch("/GetPDF", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+              },
+            body: JSON.stringify(struct)})
+            if (date.status) {
+            let body = await date.blob()
+            alert (JSON.stringify(body))
+            return body;}
+            else {
+                return {}
+
+            }
+
+    }*/
 
     return (
         <div>
@@ -40,7 +66,9 @@ function AutorizationBlock ({GetUserRule}) {
             </h3>
             </div>
             <input value={"Войти"} type='button' onClick={(e) => {requestion().then(res=> {if (res.message) {alert (res.message)}
-            else {GetUserRule(res)}})}}/>
+            else {GetUserRule(res)}
+            //requestionDouble (res=> {alert (res)})
+            })}}/>
         </div>
     )
 }

@@ -73,8 +73,14 @@ function Commentary ({token, rule, id, setCurrentId, a}) {
       <textarea id="RecenzeTextArea" disabled={(rule)?"":"disabled"} resize={"none"} style={{maxHeight: "300px", 
       minHeight: "300px", maxWidth: "500px", minWidth: "500px", "font-size": "100"}} 
       onChange={(e)=> {a.current.text=e.target.value }}/>
+      <div>
+        <div style={{margin:"10px", display:"inline-block"}}>
         <Returnbutton buttonState={setButtonState} value={"Принять"} SetValue={setState} letValue={true} />
+        </div>
+        <div style={{margin:"10px", display:"inline-block"}}>
         <Returnbutton buttonState={setButtonState} value={"Вернуть"} SetValue={setState} letValue={false} />
+        </div >
+        </div>
     </div>)
 } 
 

@@ -1,5 +1,5 @@
 function TypeCode (int) {
-    const struct = ["Незаполненно", "Заполненно", "Одобренно", "Подписанно"]
+    const struct = ["Незаполненно", "Заполненно", "Ответственный за оформленние док-тов на кафедре", "Руководитель практики от Университета", "Заведующий Кафедры", "Директор центра карьеры", "Одобренно"]
     if (int<struct.length) {
         return struct[int];
     } else {
@@ -8,3 +8,4 @@ function TypeCode (int) {
 }
 
 export default TypeCode
+

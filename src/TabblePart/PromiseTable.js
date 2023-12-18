@@ -42,7 +42,7 @@ function PromiseTable ({count, setID, Ref, token}) {
         if (st) {
         return (
         <tbody>
-          {parametr.map(par => <TabbleLabel params={par} setID={setID} Ref={Ref}/>)
+          {parametr?parametr.map(par => <TabbleLabel params={par} setID={setID} Ref={Ref}/>):""
           }
         </tbody>)
         }
