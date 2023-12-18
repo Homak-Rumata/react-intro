@@ -9,14 +9,14 @@ import GetId from "../PostFetch/GetID";
 function StatmenTabble ({setID, Ref, token, rule}) {
 
     function ReturnButton () {
-        if (!rule) {
+        if (!rule.current) {
             return (
                 <input type="button" 
                     value="Создать заявление" 
                     id="CreateStatemen" 
                     className="CreateFormButton" 
                     onClick={(e) => {
-                        GetId(setID, "User")
+                        GetId(setID, rule)
                         Ref.current = 0;
             }} />
             )

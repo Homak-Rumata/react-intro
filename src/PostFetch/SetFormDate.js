@@ -7,6 +7,8 @@ function SetFormDate (date) {
         },
         body: JSON.stringify(date)
     })
+    .then (res => res?res.text():null)
+    .then (res => {if (res) {alert (res)} else {}})
 
     //alert (JSON.stringify(JSONDate));
     

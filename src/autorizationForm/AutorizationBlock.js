@@ -8,14 +8,18 @@ function AutorizationBlock ({GetUserRule}) {
     let password
     
     const requestion = async () => {
+        let struct ={}
+        struct.login = Login;
+        struct.password = password;
         const date = await fetch("/autorization", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
               },
-            body: JSON.stringify({login: Login, password:password})})
+            body: JSON.stringify(struct)})
     
             let body = await date.json()
+            alert (JSON.stringify(body))
             return body;
     }
 
