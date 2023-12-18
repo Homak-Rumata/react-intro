@@ -39,7 +39,8 @@ function AutorizationBlock ({GetUserRule}) {
             <input type={"password"} style={{display: "block"}} onChange={(e) => password=e.target.value}/>
             </h3>
             </div>
-            <input value={"Войти"} type='button' onClick={(e) => {requestion().then(res=> {GetUserRule(res)})}}/>
+            <input value={"Войти"} type='button' onClick={(e) => {requestion().then(res=> {if (res.message) {alert (res.message)}
+            else {GetUserRule(res)}})}}/>
         </div>
     )
 }
