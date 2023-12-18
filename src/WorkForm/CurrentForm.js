@@ -42,7 +42,7 @@ function RetutnBlock () {
     }
     else{
     return (
-            <StatmenTable setID={setCurrentId} Ref={StepBar} token={token}/>
+            <StatmenTable setID={setCurrentId} Ref={StepBar} token={token} rule= {DesRef}/>
     )}
 }
 

@@ -1,13 +1,36 @@
 import ConfirmButton from '../FormParts/ConfirmButton';
 import React, { useEffect, useRef, useState } from 'react';
 
-function Commentary ({token, rule, id, setCurrentId}) {
+function Commentary ({token, rule, id, setCurrentId, a}) {
+
     const [buttonState, setButtonState] = useState(false);
     const [state, setState] = useState("Not Confirm");
 
     
 
-    let a = useRef({text: ""});
+
+
+    const res = async () => {
+        let responce = await fetch("/getRecenze", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+              },
+            body: JSON.stringify({id: id})})
+            
+            let result = await responce.json();
+            return result;
+    }
+
+    useEffect(()=>{
+
+        if (!rule) {
+            res().then(response => {
+                a.current.text=response.text;
+                document.getElementById("RecenzeTextArea").value=a.current.text;
+            })
+        }
+    },[a.current.text])
 
     useEffect(()=>{
         if (state!="Not Confirm") {
@@ -47,7 +70,7 @@ function Commentary ({token, rule, id, setCurrentId}) {
       <h2 style={{"font-weight": "normal"}}>
         Комментарии
       </h2>
-      <textarea disabled={(rule)?"":"disabled"} resize={"none"} style={{maxHeight: "300px", 
+      <textarea id="RecenzeTextArea" disabled={(rule)?"":"disabled"} resize={"none"} style={{maxHeight: "300px", 
       minHeight: "300px", maxWidth: "500px", minWidth: "500px", "font-size": "100"}} 
       onChange={(e)=> {a.current.text=e.target.value }}/>
         <Returnbutton buttonState={setButtonState} value={"Принять"} SetValue={setState} letValue={true} />

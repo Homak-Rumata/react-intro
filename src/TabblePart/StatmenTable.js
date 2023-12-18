@@ -6,7 +6,24 @@ import PromiseTable from "./PromiseTable";
 import GetId from "../PostFetch/GetID";
 
 
-function StatmenTabble ({setID, Ref, token}) {
+function StatmenTabble ({setID, Ref, token, rule}) {
+
+    function ReturnButton () {
+        if (!rule) {
+            return (
+                <input type="button" 
+                    value="Создать заявление" 
+                    id="CreateStatemen" 
+                    className="CreateFormButton" 
+                    onClick={(e) => {
+                        GetId(setID, "User")
+                        Ref.current = 0;
+            }} />
+            )
+        } else {
+            return 
+        }
+    }
 
     return (
         <div>
@@ -16,14 +33,7 @@ function StatmenTabble ({setID, Ref, token}) {
 
             </table>
             <hr />
-            <input type="button" 
-                    value="Создать заявление" 
-                    id="CreateStatemen" 
-                    className="CreateFormButton" 
-                    onClick={(e) => {
-                        GetId(setID, "User")
-                        Ref.current = 0;
-            }}></input>
+            <ReturnButton />
         </div>
     )
 }
