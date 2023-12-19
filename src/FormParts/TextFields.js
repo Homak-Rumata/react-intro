@@ -23,19 +23,31 @@ function TextFields(props) {
 
   function Intro ({prop, info, setInfo, DesRef}) {
     if (prop.typevalue === "date") {
+      let prop1 = {idvalue: "FirstTime",
+              textvalue: "Начало",
+              classvvalue: "InputInformationField",
+              namevalue: "FirstTime" };
+
+      let prop2 = {idvalue: "LastTime",
+              textvalue: "Конец",
+              classvvalue: "InputInformationField",
+              namevalue: "LastTime" };
       return (
         <div class="CompBlock">
           Сроки прохождения
-          <input type="date"id = "FirstTime" class="InputInformationField" name="FirstTime" />
-          Начало
-          <input type="date" id = "LastTime" class="InputInformationField" name="LastTime" />
-          Конец
+          <div style={{margin:"0px"}}>
+          <TextField type={"date"} props={prop1} info={info} setInfo={setInfo} DesRef={DesRef}/>
+          </div>
+          <div style={{margin:"0px"}}>
+          <TextField type={"date"} props={prop2} info={info} setInfo={setInfo} DesRef={DesRef}/>
+          </div>
+          
         </div>
       )
     } else if (typeof(prop)!="string") {
       
       return (
-        <TextField props={prop} info={info} setInfo={setInfo} DesRef={DesRef}/>
+        <TextField type={"text"} props={prop} info={info} setInfo={setInfo} DesRef={DesRef}/>
       )
     }
     else {

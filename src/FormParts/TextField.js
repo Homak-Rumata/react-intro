@@ -1,6 +1,6 @@
 import React, { useEffect} from 'react';
 
-function TextField({props, info, setInfo, DesRef}) {
+function TextField({type, props, info, setInfo, DesRef}) {
 
     function Value () {
       if (info) {
@@ -18,7 +18,7 @@ function TextField({props, info, setInfo, DesRef}) {
   return (
     <div class="CompBlock">
           {props.textvalue}
-          <input type={props.typevalue?props.typevalue:"text"} 
+          <input type={type} 
                  disabled = {DesRef?DesRef.current?"disabled":"":""}
                  id = {props.idvalue} 
                  className={props.classvvalue} 

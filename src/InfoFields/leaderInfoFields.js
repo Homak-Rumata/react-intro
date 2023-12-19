@@ -5,19 +5,19 @@ function LeaderInfoFileds () {
             {
             idvalue: "WorkLeaderFirstNameTextField",
             classvvalue: "InputInformationField" ,
-            namevalue: "FirstNameTextField",
+            namevalue: "WorkLeaderFirstNameTextField",
             textvalue: "Имя",
         },
         {
             idvalue:"WorkLeaderSecondNameTextField",
             classvvalue:"InputInformationField",
-            namevalue:"SecondNameTextField",
+            namevalue:"WorkLeaderSecondNameTextField",
             textvalue:"Фамилия",
         },
         {
             idvalue:"WorkLeaderTreeNameTextField",
             classvvalue:"InputInformationField",
-            namevalue:"TreeNameTextField",
+            namevalue:"WorkLeaderTreeNameTextField",
             textvalue:"Отчество (при наличии)",
         }],[
             "Заведующий кафеды",
