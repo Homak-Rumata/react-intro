@@ -9,7 +9,7 @@ import GetId from "../PostFetch/GetID";
 function StatmenTabble ({setID, Ref, token, rule}) {
 
     function ReturnButton () {
-        if (!rule.current) {
+        if (rule.current) {
             return (
                 <input type="button" 
                     value="Создать заявление" 
