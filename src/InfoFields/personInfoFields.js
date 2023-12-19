@@ -22,7 +22,7 @@ function PersonInfoFileds () {
     }],[
         //GroupName=undefined,
     {
-        idvalue:"Group",
+        idvalue:"Grp",
         classvvalue:"InputInformationField",
         namevalue:"FirstNameTextField",
         textvalue:"Группа",

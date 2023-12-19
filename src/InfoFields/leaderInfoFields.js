@@ -3,7 +3,7 @@ function LeaderInfoFileds () {
         [
             "Руководитель практики",
             {
-            idvalue: "CafedralLeaderFirstNameTextField",
+            idvalue: "WorkLeaderFirstNameTextField",
             classvvalue: "InputInformationField" ,
             namevalue: "FirstNameTextField",
             textvalue: "Имя",

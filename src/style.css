@@ -27,6 +27,7 @@ div#page_control_panel {
 
     button.SelectorButton {
     margin: 0px;
+    border-radius: 5px;
     padding: 0px;
     font-weight: 400; 
     border: none; 
@@ -137,6 +138,11 @@ div#MessageBlock.active {visibility:visible;
         width: auto;
     }
 
+    div.StepControlField:hover {
+        color: white;
+        background-color: yellowgreen;
+    }
+
     div.StepControlField.active {
         background-color: #3c388d;
         fill: #3c388d;
@@ -175,6 +181,7 @@ div#MessageBlock.active {visibility:visible;
     }
 
     input.AgreeFormButton {
+        border-radius: 10px;
         font-weight: 400; 
     border: none; 
     width: 150px; 
@@ -188,6 +195,11 @@ div#MessageBlock.active {visibility:visible;
     left: 15px;
     }
 
+    input.AgreeFormButton:hover {
+        color: black;
+        background-color: yellowgreen;
+    }
+
     div#WorkPannel input.AgreeFormButton {
         bottom: 50px;
     }
@@ -198,6 +210,7 @@ div#MessageBlock.active {visibility:visible;
     }
 
     input.CreateFormButton {
+        border-radius: 10px;
     font-weight: 400; 
     border: none; 
     width: 200px; 
@@ -212,7 +225,13 @@ div#MessageBlock.active {visibility:visible;
     top: 30px
     }
 
+    input.CreateFormButton:hover{
+        color: black;
+        background-color: yellowgreen;
+    }
+
     input.ButtonOpenForm {
+        border-radius: 15px;
         font-weight: 400; 
         border: none; 
         width: 200px; 
@@ -224,6 +243,11 @@ div#MessageBlock.active {visibility:visible;
         text-align: center;
         position: relative; 
         }
+
+    input.ButtonOpenForm:hover {
+        color: black;
+        background-color: yellowgreen;
+    }
 
     th.InfFields {
         font-weight: normal;

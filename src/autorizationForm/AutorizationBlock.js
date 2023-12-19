@@ -50,25 +50,40 @@ function AutorizationBlock ({GetUserRule}) {
     }*/
 
     return (
-        <div>
+        <div style={{width: "100%",
+        height: "100%",
+        position: "absolute",
+        top: "0",
+        left: 0,
+        overflow: "auto"}}>
+        <div style={{width: "250px",
+            height: "250px",
+            position: "absolute",
+            top: "0",
+            right: "0",
+            bottom: "0",
+            left: "0",
+            margin: "auto"}}>
+
             <h1 style={{"font-weight": "normal"}}>
                 Панель входа в аккаунт
             </h1>
             <div>
             <h3 style={{"font-weight": "normal"}}>
                 Логин
-            <input type={"text"} style={{display: "block"}} onChange={(e) => {Login=e.target.value}}/>
+            <input  type={"text"} className={"InputInformationField"} style={{display: "block"}} onChange={(e) => {Login=e.target.value}}/>
             </h3>
             </div><div>
             <h3 style={{"font-weight": "normal"}}>
                 Пароль
-            <input type={"password"} style={{display: "block"}} onChange={(e) => password=e.target.value}/>
+            <input type={"password"} className={"InputInformationField"} style={{display: "block"}} onChange={(e) => password=e.target.value}/>
             </h3>
             </div>
-            <input value={"Войти"} type='button' onClick={(e) => {requestion().then(res=> {if (res.message) {alert (res.message)}
+            <input className = "AgreeFormButton" value={"Войти"} type='button' onClick={(e) => {requestion().then(res=> {if (res.message) {alert (res.message)}
             else {GetUserRule(res)}
             //requestionDouble (res=> {alert (res)})
             })}}/>
+        </div>    
         </div>
     )
 }

@@ -14,7 +14,7 @@ function leader({info, setInfo, buttonState, DesRef, rule}) {
     }
   }
   return (
-    <div id = "leader" class = "WorkDateBlocks" >
+    <div id = "leader" className = "WorkDateBlocks" >
       <h2 style={{"font-weight": "normal"}}>
         Руководители
       </h2>

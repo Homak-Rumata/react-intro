@@ -15,7 +15,7 @@ function Person({info, setInfo, buttonState, DesRef, rule}) {
   }
 
   return (
-    <div id = "PersonInfo" class = "WorkDateBlocks" >
+    <div id = "PersonInfo" className = "WorkDateBlocks" >
       <h2 style={{"font-weight": "normal"}}>
         Личные данные
       </h2>
